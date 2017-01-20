@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-Site-fb480624-1856-4d75-b12c-e45b13fe98ed",
 
   "dependencies": {
@@ -43,7 +43,8 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "FxMoviesDB": "1.0.0-*"
   },
 
   "tools": {

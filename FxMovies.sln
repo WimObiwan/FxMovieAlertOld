@@ -14,6 +14,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Grabber", "src\Grabber\Grab
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Site", "Site\Site.xproj", "{0335C4C3-C13A-4F91-8A72-6A6DD042406C}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FxMoviesDB", "src\FxMoviesDB\FxMoviesDB.xproj", "{1392A763-4459-4411-A479-9E54B0127B39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{0335C4C3-C13A-4F91-8A72-6A6DD042406C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0335C4C3-C13A-4F91-8A72-6A6DD042406C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0335C4C3-C13A-4F91-8A72-6A6DD042406C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1392A763-4459-4411-A479-9E54B0127B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1392A763-4459-4411-A479-9E54B0127B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1392A763-4459-4411-A479-9E54B0127B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1392A763-4459-4411-A479-9E54B0127B39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,5 +41,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D81937B0-8171-4053-86FC-9613759686B5} = {67836D74-2734-4C24-9263-6902FE9D46F5}
 		{0335C4C3-C13A-4F91-8A72-6A6DD042406C} = {67836D74-2734-4C24-9263-6902FE9D46F5}
+		{1392A763-4459-4411-A479-9E54B0127B39} = {67836D74-2734-4C24-9263-6902FE9D46F5}
 	EndGlobalSection
 EndGlobal

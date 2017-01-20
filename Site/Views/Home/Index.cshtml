@@ -1,8 +1,23 @@
-﻿@{
+﻿@using FxMovies.FxMoviesDB;
+@using Microsoft.Extensions.Configuration;
+@{
     ViewData["Title"] = "Home Page";
-}
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    // Enable to app to read json setting files
+    //var builder = new ConfigurationBuilder()
+    //    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
+    //var configuration = builder.Build();
+
+    // Get the connection string
+    //string connectionString = configuration.GetConnectionString("FxMoviesDb");
+    string connectionString = "Data Source=c:\\temp\\fxmovies.db";
+
+    var db = FxMoviesDbContextFactory.Create(connectionString);
+    //var db = Database.Open("SmallBakery");
+    //var selectQueryString = "SELECT * FROM Product ORDER BY Name";
+}
+<!--div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -63,9 +78,9 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</div>
+</div-->
 
-<div class="row">
+<!--div class="row">
     <div class="col-md-3">
         <h2>Application uses</h2>
         <ul>
@@ -106,4 +121,10 @@
             <li><a href="http://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
         </ul>
     </div>
-</div>
+</div-->
+
+@foreach (var row in db.MovieEvents) {
+    <p>
+    @row.Title
+    </p>
+}

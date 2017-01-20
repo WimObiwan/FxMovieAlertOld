@@ -4,32 +4,32 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace FxMovies.Grabber
+namespace FxMovies.FxMoviesDB
 {
     /// <summary>
     /// The entity framework context with a Students DbSet 
     /// </summary>
-    public class FxLunchDbContext : DbContext
+    public class FxMoviesDbContext : DbContext
     {
-        public FxLunchDbContext(DbContextOptions<FxLunchDbContext> options)
+        public FxMoviesDbContext(DbContextOptions<FxMoviesDbContext> options)
             : base(options)
         { }
 
-        public DbSet<MovieEvent> Students { get; set; }
+        public DbSet<MovieEvent> MovieEvents { get; set; }
     }
 
     /// <summary>
     /// A factory to create an instance of the StudentsContext 
     /// </summary>
-    public static class FxLunchDbContextFactory
+    public static class FxMoviesDbContextFactory
     {
-        public static FxLunchDbContext Create(string connectionString)
+        public static FxMoviesDbContext Create(string connectionString)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<FxLunchDbContext>();
+            var optionsBuilder = new DbContextOptionsBuilder<FxMoviesDbContext>();
             optionsBuilder.UseSqlite(connectionString);
 
             // Ensure that the SQLite database and sechema is created!
-            var context = new FxLunchDbContext(optionsBuilder.Options);
+            var context = new FxMoviesDbContext(optionsBuilder.Options);
             context.Database.EnsureCreated();
 
             return context;

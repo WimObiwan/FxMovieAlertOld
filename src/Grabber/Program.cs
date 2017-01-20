@@ -29,12 +29,14 @@ namespace FxMovies.Grabber
             DateTime date = DateTime.Now.Date.AddDays(1);
             var movies = HumoGrabber.GetGuide(date).Result;
 
-            var fxLunchDB = new FxLunchDB(connectionString);
+            var fxMoviesDB = new FxMoviesDB(connectionString);
+
+            fxMoviesDB.RemoveForDate(date);
 
             Console.WriteLine(date.ToString());
             foreach (var movie in movies)
             {
-                fxLunchDB.Save(movie);
+                fxMoviesDB.Save(movie);
 
                 Console.WriteLine("{0} {1} {2} {4} {5}", movie.Channel.Name, movie.Title, movie.Year, movie.Channel.Name, movie.StartTime, movie.EndTime);
             }
